@@ -7,6 +7,7 @@ def fwhm(y_values_temp, x_values):
     # To make 'y_values_temp', a numpy array, into a python list
     for x in range(0,len(y_values_temp)):
         y_values.append(y_values_temp[x])
+    peak_height = max(y_values)
     half_peak_height = max(y_values)/2
     
     # Splitting the y_values data into before and after x_value at peak height
