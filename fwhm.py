@@ -12,7 +12,7 @@ def fwhm(y_values_temp, x_values):
     
     # Splitting the y_values data into before and after x_value at peak height
     y_l_temp = y_values[0:y_values.index(peak_height)]
-    y_r_temp = y_values[y_values.index(peak_height):len(a)]
+    y_r_temp = y_values[y_values.index(peak_height):len(y_values)]
     
     # Finds 1st closest value to half_peak_height in y_l and y_r
     y_l = nsmallest(1, y_l_temp, key=lambda x: abs(x-half_peak_height))
