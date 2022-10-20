@@ -19,7 +19,7 @@ def fwhm(y_values_temp, x_values):
     y_r = nsmallest(1, y_r_temp, key=lambda x: abs(x-half_peak_height))
     
     # Gets x_value pairs for y_l and y_r
-    temp_l.append(x_values[y_l.index(y_l[0])])
-    temp_r.append(x_values[y_r.index(y_r[0]) + len(y_l) -1])
+    temp_l.append(x_values_temp[y_l.index(y_l[0])])
+    temp_r.append(x_values_temp[y_r.index(y_r[0]) + len(y_l) -1])
     fwhm_n = temp_l[0] - temp_r[0]
     return abs(fwhm_n)
